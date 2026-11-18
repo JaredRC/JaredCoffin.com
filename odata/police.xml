@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0"
+           xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+  <edmx:DataServices>
+    <Schema Namespace="HateTracker" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+      <EntityType Name="PoliceViolence" OpenType="true">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="Victim" Type="Edm.String"/>
+        <Property Name="Age" Type="Edm.Int16" Nullable="false"/>
+        <Property Name="Gender" Type="Edm.String"/>
+        <Property Name="Race" Type="Edm.String"/>
+        <Property Name="DateOccured" Type="Edm.Date"/>
+        <Property Name="StreetAddress" Type="Edm.String"/>
+        <Property Name="City" Type="Edm.String"/>
+        <Property Name="State" Type="Edm.String"/>
+        <Property Name="County" Type="Edm.String"/>
+        <Property Name="PostalCode" Type="Edm.String"/>
+        <Property Name="AgencyResponsible" Type="Edm.String"/>
+        <Property Name="Cause_of_Death" Type="Edm.String"/>
+      </EntityType>
+      <EntityContainer Name="Container">
+        <EntitySet Name="PoliceViolence" EntityType="HateTracker.PoliceViolence"/>
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

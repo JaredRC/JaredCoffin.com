@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0"
+           xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+  <edmx:DataServices>
+    <Schema Namespace="JaredService" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+      <EntityType Name="Alyx" OpenType="true">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="Product" Type="Edm.String"/>
+        <Property Name="Manufacturer" Type="Edm.String"/>
+        <Property Name="Category" Type="Edm.String"/>
+        <Property Name="Date" Type="Edm.Date"/>
+        <Property Name="StateCode" Type="Edm.String"/>
+        <Property Name="City" Type="Edm.String"/>
+        <Property Name="Sales" Type="Edm.Double"/>
+        <Property Name="Quantity" Type="Edm.Int32"/>
+      </EntityType>
+      <EntityContainer Name="Container">
+        <EntitySet Name="Animalytix" EntityType="JaredService.Alyx"/>
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>
